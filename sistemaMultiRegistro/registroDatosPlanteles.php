@@ -1,3 +1,8 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
 
 
 <?php
@@ -23,17 +28,11 @@ if(isset($_POST['registrarPlantel'])){
         $envioQuery = mysqli_query($coneccion,$envioDatosPlanteles);
 
                     if ($envioQuery) {
-                        ?>
-            
-                        <h3 class="ok"> ¡Registro correcto! </h3>
-                    <?php
-                        echo "Funciona";
+                        $_SESSION['message']='Registro Correcto ';
+                        $_SESSION['message_type']='success';
                     } else {
-                    ?>
-            
-                        <h3 class="ok"> ¡Registro Incorrecto! </h3>
-                    <?php
-                        echo " No Funciona";
+                        $_SESSION['message']='Registro incorrecto ';
+                        $_SESSION['message_type']='danger';
                     }
 
 
@@ -57,10 +56,10 @@ if(isset($_POST['registrarPlantel'])){
     }else {
 
         //verifica que los campos esten llenos de no estarlos manda el siguiente mensaje 
-        //la clase bad es para el css manda un mensaje en rojo
-        ?>
-        <h3 class="bad">¡Rellene todos los campos! </h3>
-        <?php
+         
+        $_SESSION['message']='Rellene todos los campos ';
+        $_SESSION['message_type']='danger';
+        
 
     }
 

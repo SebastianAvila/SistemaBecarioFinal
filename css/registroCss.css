@@ -15,10 +15,17 @@ input[type="password"]{
     width: 300px;
     margin: 0 auto;
 }
+
+input [type="date"]{
+    height: 40px;
+    width: 300px;
+    margin: 0 auto;
+    display: inline-block;
+}
 select{
 
     height: 40px;
-    width: 400px;
+    width: 300px;
     margin: 0 auto;
 
 }
@@ -27,3 +34,4 @@ select{
     color:  #070707;
    
 }
+

@@ -1,0 +1,39 @@
+.divCrud{
+
+    text-align: center;
+}
+
+
+.button {
+  
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+    margin: 0 auto;
+    height: 65px;
+    width: 500px;
+  }
+  
+  .button2 {
+    background-color: white;
+    color: black;
+    border: 2px solid #01E972;
+  }
+  
+  .button2:hover {
+    background-color: #01E972;
+    color: white;
+  }
+  a{
+    display: inline-block;   
+    cursor:alias;
+  }

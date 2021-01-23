@@ -1,3 +1,10 @@
+
+<?php
+
+include("registroDatosPrograma.php");
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,6 +56,12 @@
       <form action="" method="post" id="formPrincipalRegistro">
         <div>
           <h3>Programas </h3>
+          <?php if(isset($_SESSION['message'])){   ?>
+          <div class="alert alert-<?= $_SESSION['message_type'] ?> alert-dismissible fade show" role="alert">
+          <?= $_SESSION['message']  ?>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>          
+          </div>
+          <?php session_destroy(); } ?> 
           <h4>Tipo de Programa</h4>
           <select name="tipoProgra" id="" require>
             <option name="tipoProgra" value="0">Seleccione Uno</option>
@@ -109,9 +122,3 @@
 </html>
 
 
-<?php
-
-include("registroDatosPrograma.php");
-
-
-?>

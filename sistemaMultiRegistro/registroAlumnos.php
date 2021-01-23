@@ -1,3 +1,8 @@
+
+<?php
+include("registroAlumnoDatos.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,6 +45,13 @@
       </nav>
       <form action="" method="post">
         <h2>Datos becario</h2>
+        
+          <?php if(isset($_SESSION['message'])){   ?>
+          <div class="alert alert-<?= $_SESSION['message_type'] ?> alert-dismissible fade show" role="alert">
+          <?= $_SESSION['message']  ?>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>          
+          </div>
+          <?php session_destroy(); } ?> 
 
         <h3>Primer Nombre</h3>
         <input type="text" class="form-control "name="primerNomBeca" id="primerNomBeca" placeholder="Obligatorio*">
@@ -140,7 +152,3 @@
   }
 </script>
 
-
-<?php
-include("registroAlumnoDatos.php");
-?>

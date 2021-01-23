@@ -2,6 +2,9 @@
 
 
 
+session_start();
+
+
 $localhost = "localhost";
 $root = "root";
 $password = "";

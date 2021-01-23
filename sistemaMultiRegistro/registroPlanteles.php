@@ -1,3 +1,8 @@
+
+<?php
+
+include("registroDatosPlanteles.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,7 +45,12 @@
       <form action="" method="post">
 
         <h3>Registrar Planteles </h3>
-
+        <?php if(isset($_SESSION['message'])){   ?>
+          <div class="alert alert-<?= $_SESSION['message_type'] ?> alert-dismissible fade show" role="alert">
+          <?= $_SESSION['message']  ?>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>          
+          </div>
+          <?php session_destroy(); } ?> 
         <h4>Nombre del plantel </h4>
         <input type="text"  class="form-control" name="nombrePlantel" id="nombrePlantel">
 
@@ -77,8 +87,3 @@
 </script>
 
 </html>
-
-<?php
-
-include("registroDatosPlanteles.php");
-?>
