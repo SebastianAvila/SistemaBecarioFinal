@@ -14,7 +14,7 @@
 
   <div class="d-flex" id="wrapper">
     <!-- Sidebar -->
-    <div class="bg-light border-right" id="sidebar-wrapper">
+    <div class="bg-light border-right" id="sidebar-wrapper"  ">
       <div class="sidebar-heading">Menu de Administrador</div>
       <div class="list-group list-group-flush">
         <a href="registroAlumnos.php" class="list-group-item list-group-item-action bg-light">Registro Alumnos</a>
@@ -28,7 +28,7 @@
 
     <!-- Page Content -->
     <div id="page-content-wrapper">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom" >
         <button class="btn" id="menu-toggle"><img src="../imagenes/img_422593.png" alt="" class=" imgBarra"></button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
