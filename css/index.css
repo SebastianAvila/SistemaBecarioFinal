@@ -1,0 +1,33 @@
+body{
+font-family: 'Oswald', sans-serif;
+
+
+
+    background-image: url("../imagenes/FondoProb.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+h2{
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+.btnBecario{
+    text-align: center;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.imgIndex{
+
+    height: 400px ;
+    width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    display: inline-block;
+
+}

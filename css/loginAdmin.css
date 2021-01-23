@@ -1,0 +1,36 @@
+body{
+    font-family: 'Oswald', sans-serif;
+    background-image: url("../imagenes/FondoProb.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.divPrincipal{
+    text-align: center;
+    margin: 0 auto;
+   
+}
+
+.imgAdmin{
+
+    height: 275px ;
+    width: 725px;
+    text-align: center;
+    margin: 0 auto;
+    display: inline-block;
+
+}
+input[type="text"]{
+
+    height: 50px;
+    width: 400px;
+    margin: 0 auto;
+}
+input[type="password"]{
+
+    height: 50px;
+    width: 400px;
+    margin: 0 auto;
+}
