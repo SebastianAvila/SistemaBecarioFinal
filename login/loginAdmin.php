@@ -1,3 +1,6 @@
+<?php  include("autentificacion_admin.php");?> 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,10 +14,17 @@
 
 <body>
     <div class="container p-4 card card-body divPrincipal">
-        <form action="autentificacion_admin.php" method="POST">
+        <form action="" method="POST">
 
             <h1 class="text-center">Administrador </h1><br>    
             <img src="../Imagenes/UADY_logo.png"class="img-fluid imgAdmin"/>
+            <?php if(isset($_SESSION['message'])){   ?>
+            <div class="alert alert-<?= $_SESSION['message_type'] ?> alert-dismissible fade show" role="alert">
+            <?= $_SESSION['message']  ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>          
+            </div>
+            <?php session_destroy(); } ?> 
+
             <h3 class="text-center">Usuario:</h3>
             <input type="text"  class="form-control " name="ad_usuario" placeholder="&#128272; Usuario "  ><br>
             <h3 class="text-center" >Contraseña:</h3>

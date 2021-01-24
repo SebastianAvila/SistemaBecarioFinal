@@ -1,3 +1,10 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+<link rel="stylesheet" href="../css/autentificacionBecario.css">
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+
+
+
 <?php
 
 include("../coneccionBaseDatos/coneccionEnvio.php");
@@ -41,18 +48,19 @@ include("../coneccionBaseDatos/coneccionEnvio.php");
         $sql2 = "SELECT * FROM sistemabecario.alumnos WHERE id_UnicoAlum='".$id_UnicoAlum."'";
         $query2 = mysqli_query($coneccion , $sql2);
         $row2 = mysqli_fetch_array($query2);
-        //$CuentaBecario ="UPDATE becariocuenta SET tipo = 'INACTIVO', horas_restantes = '135' WHERE id_UnicoAlum = '$id_UnicoAlum'"; 
-        //$CuentaQuery = mysqli_query($coneccion,$CuentaBecario);
+       
         ?>
-        Bienvenido 
-        <?php
+        <h3 class="text-center">Bienvenido</h3>
+        <h3 class="text-center">
+        <?php 
         echo $row2['primerNomBeca']. " ". $row2['apellidoPaterBeca'] ." ". $row2['apellidoMaterBeca'];
-        ?>
-        <strong>
+        ?></h3><br>
+        <h4 class="text-center">
             Horas por completar: 
-        </strong>
+        </h4>
+        <h3 class="text-center">
         <?php
-        echo $horas;
+        echo $horas;?> </h3> <?php
         if($horas<=0 and $tipo == "ACTIVO"){
             ?>
             <br>
@@ -82,24 +90,37 @@ include("../coneccionBaseDatos/coneccionEnvio.php");
             <?php
         }
         if ($tipo == "ACTIVO" and $horas > 0){
-            ?>
+            ?> <div class="container p-4 card card-body divPrincipal">
             <p>
             <form action="../login/becariooperaciones.php?id_UnicoAlum=<?php echo $row['id_UnicoAlum'];?>" method="POST">
             <label for="H1">Hora De Entrada:</label>
+            <br>
             <input type="number" id="H1" name="h1" min="1" max="24" placeholder="24max">
-            <input type="number" id="MN1" name="mn1" min="00" max="59"> - 
+            
+            <input type="number" id="MN1" name="mn1" min="00" max="59"> 
+            <br>
+            <br>
+
             <label for="H2">Hora De Salida:</label>
+            <br>
             <input type="number" id="H2" name="h2" min="1" max="24" placeholder="24max">
+            
             <input type="number" id="MN2" name="mn2" min="00" max="59">
-            <input type="submit" name="envio" value="Enviar">
+            <br>
+            <br>
+
+            <input type="submit" name="envio" value="Enviar"  class="btn btn-secondary" >
             </form>
             </p>
+            <br>
+            <a href="../index.html" ><input type="button" value="Cerrar Sesion" class="btn btn-secondary"></a>
+               </div>
             <?php
         }
         ?>
-        <p>
-        </p>
-        <a href="../index.html" class="btn btn-secondary">Cerrar Sesion
+      
+        
+
         <?php
     }
     else
@@ -110,8 +131,3 @@ include("../coneccionBaseDatos/coneccionEnvio.php");
     mysqli_close($coneccion );
     }
 ?>
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
