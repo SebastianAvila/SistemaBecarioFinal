@@ -1,4 +1,25 @@
+body{
+    background-image: url("../imagenes/FondoProb2.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+
+
+
 .divPrincipal{
 
+    text-align: center;
+}
+
+input[type="button"]{
+
+    text-align: center;
+    display: inline-block;
+}
+a{
     text-align: center;
 }
