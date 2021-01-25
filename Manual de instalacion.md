@@ -27,3 +27,23 @@ en este caso el proyecto fue programado sobre un servidor local de nombre XAMPP 
 + peguelos dentro del shell y precione enter 
 + verifique que las tablas sean creadas 
 + Si todos  lo pasos fueron seguidos a la perfeccion el sistema ya se encuentra listo para funcionar 
+
+# Datos tecnicos del Proyectos Sistema Becario 
+
+## Programado en los siguientes lenguajes 
+
++ HTML
++ PHP  
++ JavaScrip 
++ SQL 
+## Verciones de cada lenguaje
++ HTML 5 
++ PHP 7 
++ JavaScript 7 
++ SQL (PHPmyAdmin) 10.4.16-MariaDB 
+
+## Servidor local 
++ XAMPP  
+## Editor de codigo 
+
++ Visual Studio Code + Plugins 
