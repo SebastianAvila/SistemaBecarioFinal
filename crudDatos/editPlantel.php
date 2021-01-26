@@ -1,3 +1,9 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+<link rel="stylesheet" href="../css/cssUpdate.css">
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+
 <?php
 // Coneccionn con la base de datos
 include("../coneccionBaseDatos/coneccionEnvio.php");
@@ -41,24 +47,30 @@ if (isset($_POST['editarPlantel'])) {
   }
 
 ?>
-
-
-
+ <title>Sistema Becario</title>
+<div class="container p-4 card card-body divPrincipal">
 <!-- //Muestra los datos en un formato html con los valores obtenidos en la consulta anterior  -->
 <form action="editPlantel.php?clavePlantel=<?php echo $_GET['clavePlantel']; ?>" method="POST">
+<h4>ID unico</h4>                   
+<h6>NO MODIFICABLE </h6>
+    
 
-<input type="text" name="clavePlantel" id="clavePlantel" value="<?php echo $clavePlantel ?>" style="display: none;">
+<input type="text" class="form-control"  name="clavePlantel" id="clavePlantel" value="<?php echo $clavePlantel ?>" readonly>
 <h3>Localidad</h3>
-<input type="text" name="localidad" id="localidad" value="<?php echo $localidad ?>">
+<input type="text" class="form-control"  name="localidad" id="localidad" value="<?php echo $localidad ?>">
 <h3>Nombre Plantel</h3>
-<input type="text" name="nombrePlantel" id="nombrePlantel" value="<?php echo $nombre ?>">
-
-
-                
-                
-
-<button class="btn-success" name="editarPlantel">
-  Update
-</button>
+<input type="text"  class="form-control" name="nombrePlantel" id="nombrePlantel" value="<?php echo $nombre ?>">
+<br>
+<br>
+<input type="submit" name="editarPlantel" value="Update" class="btn btn-success">
+<br>
+<br>
+<a href="crudPlanteles.php"><input type="button" value="Cancelar" name="enviaAlumnos" class="btn btn-secondary" /></a>
 </form>
+</div>
+                
+                
+
+
+
 

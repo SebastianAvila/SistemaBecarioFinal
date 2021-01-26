@@ -1,4 +1,10 @@
-    <?php
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+<link rel="stylesheet" href="../css/cssUpdate.css">
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+
+<?php
 // Coneccionn con la base de datos
 include("../coneccionBaseDatos/coneccionEnvio.php");
 
@@ -64,14 +70,16 @@ if (isset($_POST['enviaPrograma'])) {
   }
 
 ?>
-
-
+ <title>Sistema Becario</title>
+<div class="container p-4 card card-body divPrincipal">
 <!-- //Muestra los datos en un formato html con los valores obtenidos en la consulta anterior  -->
 <form action="editProgramas.php?id_UnicoPro=<?php echo $_GET['id_UnicoPro']; ?>" method="POST">
 
     <div>
-      
-        <input type="text" name="id_UnicoPro" id="id_UnicoPro" style="display: none;" value="<?php echo $id_UnicoPro ?>">
+    <h4>ID unico</h4>                   
+    <h6>NO MODIFICABLE </h6>
+    
+        <input type="text" name="id_UnicoPro" id="id_UnicoPro" style="display: none;" value="<?php echo $id_UnicoPro ?>" readonly>
     
       <h3>Programas </h3>
       <h4>Tipo de Programa</h4>
@@ -87,7 +95,7 @@ if (isset($_POST['enviaPrograma'])) {
       <h4>Fecha limite del servicio del becario</h4>
       <input type="date" name="fechaFinBeca" id="fechaFinBeca" value="<?php echo  $fechaFinBeca?>">
       <h4>Horas por cubrir</h4>
-      <input type="text" name="horasCubrir" id="horasCubir" value="<?php echo $horasCubrir ?>">
+      <input type="text"  class="form-control"  name="horasCubrir" id="horasCubir" value="<?php echo $horasCubrir ?>">
       <h4>Seleccione de que plantel es este Programa</h4>
 
             <?php
@@ -128,9 +136,12 @@ if (isset($_POST['enviaPrograma'])) {
   
 
           <br><br>
-      <input type="submit" value="Registrar" name="enviaPrograma" />
+      <input type="submit" value="Update" name="enviaPrograma" class="btn btn-success"/>
+      <br>
+      <br>
+      <a href="crudProgramas.php"><input type="button" value="Cancelar"  class="btn btn-secondary" /></a>
 
     </div>
 </form>
-
+</div>
  

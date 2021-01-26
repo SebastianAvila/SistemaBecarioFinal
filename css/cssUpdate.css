@@ -1,0 +1,15 @@
+.divPrincipal{
+    text-align: center;
+    
+}
+input[type= "submit"]{
+    height: 50px;
+    width: 300px;
+    display : inline-block;
+    text-align: center;
+}
+input[type="button"]{
+    height: 50px;
+    width: 300px;
+    display : inline-block;
+}

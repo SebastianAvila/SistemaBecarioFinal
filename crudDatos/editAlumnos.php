@@ -1,3 +1,10 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+<link rel="stylesheet" href="../css/cssUpdate.css">
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+
+
 <?php
 // Coneccionn con la base de datos
 include("../coneccionBaseDatos/coneccionEnvio.php");
@@ -66,34 +73,34 @@ if (isset($_POST['enviaAlumnos'])) {
                             }
                         }?>
 
-
+<div class="container p-4 card card-body divPrincipal">
 <!-- //Muestra los datos en un formato html con los valores obtenidos en la consulta anterior  -->
 <form action="editAlumnos.php?id_UnicoAlum=<?php echo $_GET['id_UnicoAlum']; ?>" method="POST">
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-
+    <title>Sistema Becario</title>
 
     <h4>Datos becario</h4>
-    <h3>Clave unica del Alumno </h3>                        
+    <h4>ID unico</h4>                   
     <h6>NO MODIFICABLE </h6>
     
-    <input type="text" name="id_UnicoAlum" id="id_UnicoAlum" value="<?php echo $id_UnicoAlum ?>" readonly >
+    <input type="text" class="form-control" name="id_UnicoAlum" id="id_UnicoAlum" value="<?php echo $id_UnicoAlum ?>" readonly >
     <h3>Primer Nombre</h3>
-    <input type="text" name="primerNomBeca" id="primerNomBeca" placeholder="Obligatorio" value="<?php echo $primerNomBeca ?>">
+    <input type="text" class="form-control" name="primerNomBeca" id="primerNomBeca" placeholder="Obligatorio" value="<?php echo $primerNomBeca ?>">
 
     <h3>Segundo Nombre</h3>
-    <input type="text" name="segundoNomBeca" id="segundoNomBeca" placeholder="Opcional*" value="<?php echo  $segundoNomBeca ?>">
+    <input type="text" class="form-control" name="segundoNomBeca" id="segundoNomBeca" placeholder="Opcional*" value="<?php echo  $segundoNomBeca ?>">
 
     <h3>Primer Apellido</h3>
-    <input type="text" name="apellidoPaterBeca" id="apellidoPaterBeca" placeholder="Obligatorio*" value="<?php echo  $apellidoPaterBeca ?>">
+    <input type="text" class="form-control" name="apellidoPaterBeca" id="apellidoPaterBeca" placeholder="Obligatorio*" value="<?php echo  $apellidoPaterBeca ?>">
 
     <h3>Segundo Apellido</h3>
-    <input type="text" name="apellidoMaterBeca" id="apellidoMaterBeca" placeholder="Obligatorii*" value="<?php echo  $apellidoMaterBeca ?>">
+    <input type="text" class="form-control" name="apellidoMaterBeca" id="apellidoMaterBeca" placeholder="Obligatorii*" value="<?php echo  $apellidoMaterBeca ?>">
 
     <h3>Celular a 10 digitos</h3>
-    <input type="text" name="celular" id="celular" placeholder="Lada + 7 numeros restantes" value="<?php echo $celular ?>">
+    <input type="text"  class="form-control" name="celular" id="celular" placeholder="Lada + 7 numeros restantes" value="<?php echo $celular ?>">
 
     <h3>Correo Electronico</h3>
-    <input type="text" name="correoElec" id="correoElec" placeholder="corrre@jemplo.com" value="<?php echo  $correoElec ?>">
+    <input type="text" class="form-control" name="correoElec" id="correoElec" placeholder="corrre@jemplo.com" value="<?php echo  $correoElec ?>">
 
 <!-- Query para poder mostrar su clave unica, almacenada en otra tabla  -->
     <?php
@@ -105,10 +112,10 @@ if (isset($_POST['enviaAlumnos'])) {
         $pass_becario = $row['pass_becario'];
     ?>
         <h3>usuario para su login </h3>
-        <input type="text" name="usuarioBecario" id="usuarioBecario" placeholder=" datos+@gmail.mx" value="<?php echo  $correo_becario ?>">
+        <input type="text" class="form-control" name="usuarioBecario" id="usuarioBecario" placeholder=" datos+@gmail.mx" value="<?php echo  $correo_becario ?>">
 
         <h3>Password</h3>
-        <input type="text" name="passwordBecario" id="passwordBecario" value="<?php echo  $pass_becario ?>">
+        <input type="text"  class="form-control" name="passwordBecario" id="passwordBecario" value="<?php echo  $pass_becario ?>">
         <br><br>
     <?php
     }
@@ -142,7 +149,7 @@ if (isset($_POST['enviaAlumnos'])) {
     <h3>Programa elejido Anteriormente: </h3>
     <p> <?php echo $tipoProgra ?></p>
 
-    // query para poder informarle al administrador sobre lo elejido anteriormente  y pueda volver a elegir 
+    <!-- // query para poder informarle al administrador sobre lo elejido anteriormente  y pueda volver a elegir  -->
     <?php
     $link = mysqli_connect("localHost", "root", "");
     if ($link) {
@@ -164,11 +171,15 @@ if (isset($_POST['enviaAlumnos'])) {
 <!-- Div utilizado por el scrip que acontinuacion se utilizara para poder detectar el cambio del primer select -->
     <div id="id_UnicoPro" name="id_UnicoPro "></div>
 
-
-    <input type="submit" value="Registrar" name="enviaAlumnos" />
+<br>
+    <input type="submit" value="Update" name="enviaAlumnos" class="btn btn-success" />
+    <br>
+    <br>
+    <a href="crudAlumnos.php"><input type="button" value="Cancelar"  class="btn btn-secondary" /></a>
 
 
 </form>
+</div>
 
 <!--Scrip para poder refrescar el selecte  -->
 <script type="text/javascript">
