@@ -49,7 +49,6 @@ include("registroDatosPrograma.php");
       $link = mysqli_connect("localHost", "root", "");
       if ($link) {
         mysqli_select_db($link, "sistemabecario");
-        mysqli_query($link, "SET NAMES 'utf0'");
       }
 
       ?>

@@ -84,7 +84,6 @@ include("registroAlumnoDatos.php");
         $link = mysqli_connect("localHost", "root", "");
         if ($link) {
           mysqli_select_db($link, "sistemabecario");
-          mysqli_query($link, "SET NAMES 'utf0'");
         }
         ?>
         <h3>Plantel de procedencia</h3>
