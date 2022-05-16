@@ -41,7 +41,7 @@ include("../coneccionBaseDatos/coneccionEnvio.php");
         die("Connection Failed : ".mysqli_connect_error());
     }
 
-    $sql= "SELECT * FROM sistemabecario.admin WHERE user='".$admin_username."' AND pass='".$admin_password."'";
+    $sql= "SELECT * FROM btjx92rr0ncrcmyn4gzn.admin WHERE user='".$admin_username."' AND pass='".$admin_password."'";
     $query= mysqli_query($coneccion , $sql);
 
 
