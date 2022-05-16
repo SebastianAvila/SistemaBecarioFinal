@@ -32,7 +32,7 @@ if (empty($_POST['be_usuario']) || empty($_POST['be_contra'])) {
         die("Connection Failed : " . mysqli_connect_error());
     }
 
-    $sql = "SELECT * FROM sistemabecario.becariocuenta WHERE correo_becario='" . $becario_username . "' AND pass_becario='" . $becario_password . "'";
+    $sql = "SELECT * FROM btjx92rr0ncrcmyn4gzn.becariocuenta WHERE correo_becario='" . $becario_username . "' AND pass_becario='" . $becario_password . "'";
     $query = mysqli_query($coneccion, $sql);
 
 
@@ -41,7 +41,7 @@ if (empty($_POST['be_usuario']) || empty($_POST['be_contra'])) {
         $id_UnicoAlum = $row['id_UnicoAlum'];
         $horas = $row['horas_restantes'];
         $tipo = $row['tipo'];
-        $sql2 = "SELECT * FROM sistemabecario.alumnos WHERE id_UnicoAlum='" . $id_UnicoAlum . "'";
+        $sql2 = "SELECT * FROM btjx92rr0ncrcmyn4gzn.alumnos WHERE id_UnicoAlum='" . $id_UnicoAlum . "'";
         $query2 = mysqli_query($coneccion, $sql2);
         $row2 = mysqli_fetch_array($query2);
 

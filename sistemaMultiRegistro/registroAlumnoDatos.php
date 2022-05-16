@@ -19,9 +19,8 @@ if (isset($_POST['registraAlumno'])) {
         $apellidoMaterBeca = $_POST['apellidoMaterBeca'];
         $celular = $_POST['celular'];
         $correoElec = $_POST['correoElec'];
-        date_default_timezone_set("America/Mexico_City");
-        DateTimeInterface::RFC1123;
-        $fechaRegistroAlumno = date(DATE_RFC1123);
+        
+        $fechaRegistroAlumno = date('18/05/2022');
         $id_unicoPro = $_POST['id_UnicoPro'];
         $clavePlantel = $_POST['clavePlantel'];
         $usuarioBecario = $_POST['usuarioBecario'];

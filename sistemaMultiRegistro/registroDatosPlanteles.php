@@ -15,9 +15,8 @@ include("../coneccionBaseDatos/coneccionEnvio.php");
 if(isset($_POST['registrarPlantel'])){
     if( strlen($_POST['nombrePlantel'])>=1 and strlen($_POST['clavePlantel'])>=1 and strlen($_POST['localidadPlantel'])>=1 ){
 
-        date_default_timezone_set("America/Mexico_City");
-        DateTimeInterface::RFC1123;
-        $fechaRegistroPlantel = date(DATE_RFC1123);
+       
+        $fechaRegistroPlantel = date('18/05/2022');
 
         $nombrePlantel = $_POST['nombrePlantel'];
         $clavePlantel = $_POST['clavePlantel'];

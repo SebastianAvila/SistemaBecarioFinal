@@ -16,9 +16,8 @@ if(isset($_POST['enviaPrograma'])){
         $horasCubrir = $_POST['horasCubrir'];
         $clavePlantel = $_POST['clavePlantel'];
 
-        date_default_timezone_set("America/Mexico_City");
-        DateTimeInterface::RFC1123;
-        $fechaRegistroPrograma = date(DATE_RFC1123);
+    
+        $fechaRegistroPrograma = date('18-05-22');
 
         $NumAleFo = rand(9999, 99999);
         $id_UnicoPro = "PRO";
