@@ -31,8 +31,8 @@
       <div class="btnBecario">
 
       
-      <a href="login\loginBecario.html">
-        <input type="button" value="Iniciar Sesion" class="btn btn-outline-warning botonBecario" href="loginBecario.html"/></a>
+      <a href="login\loginBecario.php">
+        <input type="button" value="Iniciar Sesion" class="btn btn-outline-warning botonBecario" href="loginBecario.php"/></a>
       </div>
     </div>
 

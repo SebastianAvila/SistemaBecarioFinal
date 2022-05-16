@@ -25,8 +25,8 @@ include("registroAlumnoDatos.php");
         <a href="registroAlumnos.php" class="list-group-item list-group-item-action bg-light">Registro Alumnos</a>
         <a href="registroPrograma.php" class="list-group-item list-group-item-action bg-light">Registro Programas</a>
         <a href="registroPlanteles.php" class="list-group-item list-group-item-action bg-light">Registro Planteles</a>
-        <a href="../seleccionAdmin.html" class="list-group-item list-group-item-action bg-light">Regresar al menu </a>
-        <a href="../index.html" class="list-group-item list-group-item-action bg-light">Cerrar Sesion</a>
+        <a href="../seleccionAdmin.php" class="list-group-item list-group-item-action bg-light">Regresar al menu </a>
+        <a href="../index.php" class="list-group-item list-group-item-action bg-light">Cerrar Sesion</a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->

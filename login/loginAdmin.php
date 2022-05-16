@@ -32,7 +32,7 @@
             <br>
             <input type="submit" class="btn btn-success btn-block" value="Iniciar Sesion"> 
             <br>
-            <a href="../index.html"> Regresar al inicio</a>
+            <a href="../index.php"> Regresar al inicio</a>
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>

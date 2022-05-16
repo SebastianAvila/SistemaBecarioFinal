@@ -19,7 +19,7 @@ function test_input($data)
 }
 
 if (empty($_POST['be_usuario']) || empty($_POST['be_contra'])) {
-    header("location:errorCamposVbecario.html");
+    header("location:errorCamposVbecario.php");
 } else {
     $becario_username = test_input($_POST['be_usuario']);
     $becario_password = test_input($_POST['be_contra']);
@@ -66,7 +66,7 @@ if (empty($_POST['be_usuario']) || empty($_POST['be_contra'])) {
             <h3> Este boton creara un PDF descargable en el cual se afirma que ya haz finalizado con las horas del servicio solicitado, es importante que conserves este documento para futuras solicitudes</h3>
             <a href="../login/becariofin.php?id_UnicoAlum=<?php echo $row['id_UnicoAlum']; ?>" target="c_blank">
                 <input type="button" value="Crear carta de Finalizacion" class="btn btn-secondary"></a>
-            <a href="../index.html"><input type="button" value="Cerrar Sesion" class="btn btn-secondary"></a>
+            <a href="../index.php"><input type="button" value="Cerrar Sesion" class="btn btn-secondary"></a>
         <?php
                                 } else if ($horas > 0 and $tipo == "INACTIVO") {
         ?>
@@ -78,7 +78,7 @@ if (empty($_POST['be_usuario']) || empty($_POST['be_contra'])) {
             <a href="../login/becarioinicio.php?id_UnicoAlum=<?php echo $row['id_UnicoAlum']; ?>" target="c_blank">
                 <input type="button" value="Crear Carta de Inicio" class="btn btn-secondary btnB">
             </a>
-            <a href="../index.html"><input type="button" value="Cerrar Sesion"></a>
+            <a href="../index.php"><input type="button" value="Cerrar Sesion"></a>
 
         <?php
                                 } else if ($horas <= 0 and $tipo = "INACTIVO") {
@@ -110,7 +110,7 @@ if (empty($_POST['be_usuario']) || empty($_POST['be_contra'])) {
                 </form>
                 </p>
                 <br>
-                <a href="../index.html"><input type="button" value="Cerrar Sesion" class="btn btn-secondary"></a>
+                <a href="../index.php"><input type="button" value="Cerrar Sesion" class="btn btn-secondary"></a>
             </div>
         <?php
                                 }
@@ -120,7 +120,7 @@ if (empty($_POST['be_usuario']) || empty($_POST['be_contra'])) {
 
 <?php
     } else {
-        header("location:errorContraBecario.html");
+        header("location:errorContraBecario.php");
     }
 
     mysqli_close($coneccion);

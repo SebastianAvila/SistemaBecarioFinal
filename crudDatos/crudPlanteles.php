@@ -52,7 +52,7 @@
             <?php } ?>
             </tbody>
         </table>
-        <a href="../seleccionAdmin.html"> <input type="button" value="Regresar" class="button button2"></a>
+        <a href="../seleccionAdmin.php"> <input type="button" value="Regresar" class="button button2"></a>
         </div>
   </div>
 

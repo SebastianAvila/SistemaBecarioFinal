@@ -54,7 +54,7 @@ if(isset($_POST['envio'])){
             echo round($HorasInsertar);
             ?>
              horas<p>
-             <a href="../index.html" class="btn btn-secondary">Cerrar Sesion
+             <a href="../index.php" class="btn btn-secondary">Cerrar Sesion
             </p>
             <?php
             if($HorasInsertar >= 0)

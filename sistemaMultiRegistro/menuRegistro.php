@@ -28,10 +28,10 @@
           <a href="registroPlanteles.php" class="list-group-item list-group-item-action bg-light"
             >Registro Planteles</a
           >
-          <a href="../seleccionAdmin.html" class="list-group-item list-group-item-action bg-light"
+          <a href="../seleccionAdmin.php" class="list-group-item list-group-item-action bg-light"
             >Regresar al menu </a
           >
-          <a href="../index.html" class="list-group-item list-group-item-action bg-light"
+          <a href="../index.php" class="list-group-item list-group-item-action bg-light"
             >Cerrar Sesion</a
          
           >

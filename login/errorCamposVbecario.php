@@ -10,7 +10,7 @@
 <body>
     <div class="container p-4 card card-body divPrincipal">
         <h1>Campos vacios</h1>
-        <a href="loginBecario.html">
+        <a href="loginBecario.php">
         
             <input type="button" value="Intentalo de nuevo" class="btn btn-secondary">
         </a>

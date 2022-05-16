@@ -48,7 +48,7 @@ include("../coneccionBaseDatos/coneccionEnvio.php");
 
     if(mysqli_num_rows($query)==1)
     {
-        header("location:../seleccionAdmin.html");
+        header("location:../seleccionAdmin.php");
         
     }
     else
