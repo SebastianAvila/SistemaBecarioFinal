@@ -19,7 +19,7 @@
 
                 <div class="panel-body">
 
-                    <form  action="autentificacion_becario.php" name="form" id="form" class="form-horizontal" enctype="multipart/form-data" method="POST">
+                    <form  action="autentificacion_becario.php" name="form" id="form" class="form-horizontal"  method="POST">
                         <?php if (isset($_SESSION['message'])) {   ?>
                             <div class="alert alert-<?= $_SESSION['message_type'] ?> alert-dismissible fade show" role="alert">
                                 <?= $_SESSION['message']  ?>
@@ -41,9 +41,11 @@
                             <!-- Button -->
                             <div class="col-sm-12 controls">
                                 <button type="submit" href="#" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-log-in"></i> Log in</button>
-                                <a href="../index.php"><button href="#" class="btn btn-secondary pull-right">Regresar</button>
-                                </a>
+                                <a href="../index.php"><input type="button" value="Regresar" class="btn btn-secondary pull-left">    </a>
                             </div>
+                            
+                            
+                                
                         </div>
 
                     </form>
