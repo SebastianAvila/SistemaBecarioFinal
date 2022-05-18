@@ -15,7 +15,7 @@
   <body>
     <nav class="navbar navbar-light" style="background-color: #4A777C;" >
       <div class="container">
-        <a href="login/loginAdmin.php" class="navbar-brand nav-link active">Administradoras</a>
+        <a href="login/loginAdmin.php" class="navbar-brand nav-link active">Administrador</a>
         
       </div>
     </nav>
