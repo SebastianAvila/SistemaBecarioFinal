@@ -1,5 +1,5 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
-<link rel="stylesheet" href="../css/autentificacionBecario.css?1.0">
+<link rel="stylesheet" href="../css/autentificacionBecario.css">
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
 
@@ -46,7 +46,12 @@ if (empty($_POST['be_usuario']) || empty($_POST['be_contra'])) {
         $row2 = mysqli_fetch_array($query2);
 
 ?>
-        <h3 class="text-center">Bienvenido</h3>
+
+<?php include('../layout/header.php'); ?>
+
+
+        <div class="container">
+        <h3 class="text-center">Bienvenido becario: </h3>
         <h3 class="text-center">
             <?php
             echo $row2['primerNomBeca'] . " " . $row2['apellidoPaterBeca'] . " " . $row2['apellidoMaterBeca'];
@@ -73,17 +78,17 @@ if (empty($_POST['be_usuario']) || empty($_POST['be_contra'])) {
             <p>
             </p>
 
-            <h1>Info</h1>
-            <h3> Este boton creara un PDF descargable en el cual autorizas el inico de tu servicio solicitado, es importante que conserves este documento para futuras solicitudes</h3>
+            <h1>Informacion</h1>
+            <h3> Este boton creara un PDF descargable en el cual autorizas el inico de tu servicio solicitado, es importante que conserves este documento para futuras solicitudes y/o tramites escolares</h3>
             <a href="../login/becarioinicio.php?id_UnicoAlum=<?php echo $row['id_UnicoAlum']; ?>" target="c_blank">
-                <input type="button" value="Crear Carta de Inicio" class="btn btn-secondary btnB">
+                <input type="button" value="Crear Carta de Inicio" class="btn btn-success">
             </a>
-            <a href="../index.php"><input type="button" value="Cerrar Sesion"></a>
+            <a href="../index.php"><input type="button" class="btn btn-danger" value="Cerrar Sesion"></a>
 
         <?php
                                 } else if ($horas <= 0 and $tipo = "INACTIVO") {
         ?>
-            <h1>Haz finalizado con tus horas del servicio requerido</h1>
+            <h1>Enhorabuena, haz finalizado con tus horas del servicio requerido</h1>
         <?php
                                 }
                                 if ($tipo == "ACTIVO" and $horas > 0) {
@@ -116,6 +121,10 @@ if (empty($_POST['be_usuario']) || empty($_POST['be_contra'])) {
                                 }
         ?>
 
+
+        </div>
+
+        
 
 
 <?php
